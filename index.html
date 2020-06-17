@@ -1,8 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang='en' xmlns='https://www.w3.org/1999/xhtml'></html>
   <head>
       <meta charset="utf-8">
     <title>Rush</title>
 </head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+</script>
 <style>
       @font-face {
       font-family: "Balance";
@@ -135,7 +139,7 @@ padding: 10px;
   }
   #server_up {
   position:relative;
-    top: -173px;
+    top: -120px;
 width:65px;
 height: 5px;
 left: 92px;
@@ -147,9 +151,9 @@ opacity: 0.4;
   }
   #server_up_name {
   position:relative;
-    top: -23px;
+    top: -22px;
     font-family: "menu";
-left: -4px;
+left: -1px;
 font-size: 15px;
   }
   #click_img{
@@ -167,22 +171,7 @@ font-size: 15px;
     height: 62px;
     top: -1px;
   }
-  #temp_img{
-    position: relative;
-    right: -123px;
-    width: 25px;
-    height: 25px;
-    top: -187px;
-  }
-  #temp{
-    font-family: "text";
-    font-size: 14px;
-    font-weight: 100;
-    position: relative;
-    top: -152px;
-    right: -102px;
-    color: black;
-  }
+
   #pros_panel{
     position:relative;
     top: 8px;
@@ -293,12 +282,21 @@ display: none;
 <coin id='coin'>Монеты</coin>
 <server id='server' >Сервер</server>
 <ect id='ect'>Другое</ect>
-<div id='panel'><div id='click_panel'><p id='click'></p><p id='click_zarabotok'>Заработать</p><img src="./click.png" id='click_img'></div><div id='server_panel'><img src="./server.png" id='server_img'><p id='server_name'>Сервер</p><p id='server_zanato'></p><p id='temp'></p><img src="term.png" id='temp_img'><div id='server_up'><p id='server_up_name'>Улучшить</p></div></div><div id='video_card_panel'><img src="video-card.png" id='video_card_img'><p id='video_card_name'>Видеокарта</p><p id='video_card_1'>0 шт</p><img src="buy.png" id='video_buy'></div><div id='pros_panel'><img src="pros.png" id='pros_img'><p id='pros_name'>Процессор</p><p id='pros_1'>0 шт</p><img src="buy.png" id='pros_buy'></div></div>
+<div id='panel'><div id='click_panel'><p id='click'></p><p id='click_zarabotok'>Заработать</p><img src="./click.png" id='click_img'></div><div id='server_panel'><img src="./server.png" id='server_img'><p id='server_name'>Сервер</p><p id='server_zanato'></p><div id='server_up'><p id='server_up_name'>Улучшить</p></div></div><div id='video_card_panel'><img src="./video-card.png" id='video_card_img'><p id='video_card_name'>Видеокарта</p><p id='video_card_1'>0 шт</p><img src="./buy.png" id='video_buy'></div><div id='pros_panel'><img src="./pros.png" id='pros_img'><p id='pros_name'>Процессор</p><p id='pros_1'>0 шт</p><img src="./buy.png" id='pros_buy'></div></div>
 </center>
 <script type='module'src='vk.js'></script>
   <script>
+
+var socket = io.connect('https://localhost:3000');
+var socket = io();
+
+socket.on(start, function (data) {
+  
+})
+
+
     //баланс
-    let balance = 1000000;
+    let balance = 0;
     let balance_speed = 0;
     let balance_click = 0.01;
 
@@ -308,7 +306,6 @@ display: none;
     let video_cards_1 = 0;
     let pross_1 = 0;
 
-    let server_temp = 68*Math.ceil((video_cards_1+pross_1)/100);
 
     let mines = [0.01, 0.02, 0.03, 0.04, 0.05,0.1,0.2,0.3,0.4,0.5];
     let prosIvideo_prices = [1 , 2 , 3 , 4 , 5 , 8  , 11 , 14 , 17 , 20 , 27 , 34 , 41 , 48 , 55 , 60 , 75 , 90 , 115 , 130 , 165 , 200 , 235 , 270 , 305 , 400 , 500 , 600 , 700 , 800 , 900 , 1000 , 1250, 1500 , 1750 , 2000 , 2250 , 2750 , 3250 , 4000 , 4750 , 5500 , 6250 ,7000 , 7750 , 8500 , 9250, 10000 , 15000, 20000 ];
@@ -316,11 +313,6 @@ display: none;
     var server_lvl = 1;
     var server_up_prices = [20,50,150,500,1750,5000,17500,50000,100000];
 
-
-function tempS() {
-var tempI = document.getElementById('temp');
-tempI.innerText = (server_temp) + '°С';
-}
 
 function serverSet() {
  var serverI = document.getElementById('server_zanato');
@@ -332,15 +324,15 @@ function serverSet() {
       if(balance>=1000000) {
         if(balance>=1000000000) {
   var balanceI = document.getElementById('balance');
-  balanceI.innerText = Math.round((balance/1000000000)*100)/100 + 'B R'
+  balanceI.innerText = Math.floor((balance/1000000000)*100)/100 + 'B R'
   } else {
     var balanceI = document.getElementById('balance');
-  balanceI.innerText = Math.round((balance/1000000)*100)/100 + 'M R'
+  balanceI.innerText = Math.floor((balance/1000000)*100)/100 + 'M R'
   }
       }
   else {
   var balanceI = document.getElementById('balance');
-  balanceI.innerText =Math.round((balance/1000)*100)/100 + 'K R'
+  balanceI.innerText =Math.floor((balance/1000)*100)/100 + 'K R'
   }
     }
     else {
@@ -403,7 +395,6 @@ function serverSet() {
     speed();
     click();
     serverSet();
-    tempS();
     pros_i_video();
     }
 
@@ -414,8 +405,6 @@ function serverSet() {
     function mainingC() {
     balance = Math.round((balance+balance_speed)*100)/100;
     prow();
-    
-    tempS();
     }
 
 
@@ -498,7 +487,6 @@ function server_prow() {
     speed();
     click();
     serverSet();
-    tempS();
     pros_i_video();
 }
 
@@ -566,3 +554,4 @@ server_prow();
   </script>
 </body>
 </html>
+
