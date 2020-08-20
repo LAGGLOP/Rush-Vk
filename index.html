@@ -23,15 +23,15 @@
 																								}
 																								#rimg { 
 																										position:relative;
-																										width:200px;
+																										width:300px;
 																										display: none;
 																												} 
 </style>
 </head>
 <body>
-<h><center><p id="roman">Поздравляю, ты ШиЗоИд! </p></center></h>
+<h><center><p id="roman"> </p></center></h>
 <center><img
-id="rimg"        src="https://sun1.beltelecom-by-minsk.userapi.com/pZRgdqTMuMA9hJV5anAU1lGyGS1-M94Z5T1-Ow/FqRBFtKUoz4.jpg"></center>
+id="rimg"        src=""></center>
 <div id='try'>
       <p><b id='quw'>???</b></p>
       <a><input id="i1" name="ans" type="radio" checked><p id="s1"></p></a>
@@ -117,8 +117,27 @@ function get() {
 												document.getElementById("roman").style.display ="block" 
 												
 												document.getElementById("rimg").style.display ="block" 
+												
+												var isr = getRandom(1,4)
+												if(isr==1) {
+																document.getElementById("rimg").src="https://sun9-61.userapi.com/aIh4hZi-LFVqYcfy7Ja2TaD15C1LhglBC-NWwQ/k2cz3pIKO8o.jpg"
+															
+															document.getElementById("roman").innerText='Поздравляю, ты ШиЗоИд!'
+																} else {
+																				if(isr==2) {
+																								document.getElementById("rimg").src="https://sun1.beltelecom-by-minsk.userapi.com/pZRgdqTMuMA9hJV5anAU1lGyGS1-M94Z5T1-Ow/FqRBFtKUoz4.jpg" 
+															
+															document.getElementById("roman").innerText='сразу видно что не роман, разумный человек! '
+																								} else {
+																				if(isr==3) {
+																								document.getElementById("rimg").src="https://sun2.beltelecom-by-minsk.userapi.com/0PRiq1Fz3oyU1TBvwub7vgU6IJS6zss71QyjeA/YBCSaEXCykw.jpg " 
+															
+															document.getElementById("roman").innerText='самый обычный, пустоголовый роман'
+																								} 
+																				} 
+																				} 
 												} 
 				} 
 </script>
 </body>
-</html>
+</html> 
