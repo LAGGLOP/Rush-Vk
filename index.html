@@ -1,10 +1,7 @@
 <html>
 <head>
 <style>
-				input::placeholder {
-								font-weight: 450;
-								opacity:0.7;
-								} 
+			
 				#panel {
 								position:relative;
 								border: 0.5px solid #a0a0a0;
@@ -23,9 +20,25 @@
 																} 
 												#agei {
 																border: 0px solid white;
-															outline:none; 	
+															outline:none; 	 
 															position: absolute;
 																background-color: white;
+																																			font-weight: 450;
+								opacity:0.7;
+																}
+																										#pal {
+																					text-align: center;									
+																position: absolute;
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: black;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 																} 
 </style>
 </head>
@@ -36,8 +49,13 @@
 <center><div id="panel"></div></center>
 
 <form id="age">
-<input  pattern="^[ 0-9]+$" id='agei' type="number" placeholder="Ваш возраст">
+<input  pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
 </form>
+
+<select id="pal">
+<option>Мужской</option>
+<option>Женский</option>
+</select>
         
 <script type="text/javascript">
 
@@ -68,6 +86,16 @@ document.getElementById("agei").style.top=h/110
 document.getElementById("agei").style.left=w/20
 
 document.getElementById("agei").style.fontSize=h/45
+
+document.getElementById("pal").style.top = h/5
+
+document.getElementById("pal").style.width = w*0.84
+
+document.getElementById("pal").style.height = h/20
+
+document.getElementById("pal").style.left= w/20
+
+document.getElementById("pal").style.fontSize=h/45
 </script>
 
 </body>
