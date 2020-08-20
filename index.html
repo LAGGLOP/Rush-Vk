@@ -20,15 +20,19 @@
 
 <script type="text/javascript">
 
-document.getElementById("panel").style.width = window.innerWidth*0.95;
+var w = document.documentElement.clientWidth;
+ 
+ var h = document.documentElement.clientHeight
 
-document.getElementById("panel").style.top = window.innerHeight/16
+document.getElementById("panel").style.width = w*0.95;
 
-document.getElementById("panel-text").style.fontSize = window.innerHeight/25
+document.getElementById("panel").style.top = h/16
 
-document.getElementById("panel-text").style.top = window.innerHeight/65
+document.getElementById("panel-text").style.fontSize = h/25
 
-document.getElementById("panel-text").style.left = window.innerHeight/27
+document.getElementById("panel-text").style.top = h/65
+
+document.getElementById("panel-text").style.left = h/27
 </script>
 
 </body>
