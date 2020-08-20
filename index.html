@@ -25,13 +25,18 @@
 																										position:relative;
 																										width:300px;
 																										display: none;
-																												} 
+																												}
+																												#restart {
+																																display: none;
+																																position: relative;
+																																} 
 </style>
 </head>
 <body>
 <h><center><p id="roman"> </p></center></h>
 <center><img
 id="rimg"        src=""></center>
+<button id="restart" onclick="restart()">Рестарт</button>
 <div id='try'>
       <p><b id='quw'>???</b></p>
       <a><input id="i1" name="ans" type="radio" checked><p id="s1"></p></a>
@@ -53,6 +58,32 @@ var howquw=getRandom(2,3);
 var isquw = 1;
 var be = [] 
 				
+			function restart() {
+							isquw=1;
+							be=[];
+							howquw=getRandom(2,3); 
+							document.getElementById("restart").style.display ="none" 
+												document.getElementById("quw").style.display ="block"
+												
+												document.getElementById("s1").style.display ="inline" 
+												
+												document.getElementById("s2").style.display ="inline"
+												
+												document.getElementById("s3").style.display ="inline" 
+												
+												document.getElementById("da").style.display ="block"
+												
+												document.getElementById("i1").style.display ="inline" 
+												
+												document.getElementById("i2").style.display ="inline"
+												
+												document.getElementById("i3").style.display ="inline" 
+												
+												document.getElementById("roman").style.display ="none" 
+												
+												document.getElementById("rimg").style.display ="none" 
+							get() 
+							}
 get() 
 function get() {
 				if(howquw>=isquw) {
@@ -94,10 +125,11 @@ function get() {
 												isquw+=1;
 												be.push({
 																"quw":ai
-																});
-																console.log(be) 
+																})
 								} 				
 								} else {
+											
+											document.getElementById("restart").style.display ="block" 
 												document.getElementById("quw").style.display ="none"
 												
 												document.getElementById("s1").style.display ="none" 
@@ -140,4 +172,4 @@ function get() {
 				} 
 </script>
 </body>
-</html> 
+</html>
