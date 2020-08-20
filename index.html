@@ -30,12 +30,17 @@
 																																display: none;
 																																position: relative;
 																																} 
+																																#opis {
+																																				display: none;
+																																				position: relative;
+																																				}
 </style>
 </head>
 <body>
 <h><center><p id="roman"> </p></center></h>
 <center><img
 id="rimg"        src=""></center>
+<p id="opis"></p>
 <button id="restart" onclick="restart()">Рестарт</button>
 <div id='try'>
       <p><b id='quw'>???</b></p>
@@ -82,6 +87,7 @@ var be = []
 												document.getElementById("roman").style.display ="none" 
 												
 												document.getElementById("rimg").style.display ="none" 
+												document.getElementById("opis").style.display ="none" 
 							get() 
 							}
 get() 
@@ -148,6 +154,8 @@ function get() {
 												
 												document.getElementById("roman").style.display ="block" 
 												
+												document.getElementById("opis").style.display ="block" 
+												
 												document.getElementById("rimg").style.display ="block" 
 												
 												var isr = getRandom(1,4)
@@ -155,16 +163,22 @@ function get() {
 																document.getElementById("rimg").src="https://sun9-61.userapi.com/aIh4hZi-LFVqYcfy7Ja2TaD15C1LhglBC-NWwQ/k2cz3pIKO8o.jpg"
 															
 															document.getElementById("roman").innerText='Поздравляю, ты ШиЗоИд!'
+															
+															document.getElementById("opis").innerText='ваши мозги ничем не отличаются, чем у обезьяны. вы любите есть бананы и присылаете унизительные пикчи. у вас есть чувство собственной важности. ВЫ ДАЖЕ ПОСЛЕ ТОЧКИ НЕ МОЖЕТЕ ПОСТАВИТЬ ЗАГЛАВНУЮ БУКВУ. благо у вас есть мозги чтобы точки расставить.'
 																} else {
 																				if(isr==2) {
 																								document.getElementById("rimg").src="https://sun1.beltelecom-by-minsk.userapi.com/pZRgdqTMuMA9hJV5anAU1lGyGS1-M94Z5T1-Ow/FqRBFtKUoz4.jpg" 
 															
 															document.getElementById("roman").innerText='сразу видно что не роман, разумный человек! '
+															
+															document.getElementById("opis").innerText = "Воу, воу. Молодой человек, Вы слишком умны для этих тестов, Ваш разум на уровне Бодюа."
 																								} else {
 																				if(isr==3) {
 																								document.getElementById("rimg").src="https://sun2.beltelecom-by-minsk.userapi.com/0PRiq1Fz3oyU1TBvwub7vgU6IJS6zss71QyjeA/YBCSaEXCykw.jpg " 
 															
-															document.getElementById("roman").innerText='самый обычный, пустоголовый роман'
+															document.getElementById("roman").innerText='самый обычный, натуральный роман'
+															
+															document.getElementById("opis").innerText = "Вы самый обычный Роман. Любите программировать. У вас много друзей, которые все тебя любят. Любишь пользоваться фотошопом на телефоне, но создаёшь дурацкие тесты в ВК."
 																								} 
 																				} 
 																				} 
