@@ -100,32 +100,34 @@ function get() {
 				
 				
 								if(howquw>=isquw) {
+												
 				var ai = getRandom(1,4);
 				if(be.find(x=>x.quw==ai)) {
 								get() 
 								} else { 
 													if(document.getElementById("i1").checked) {
 																				
-												score+=Number(document.getElementById("i1").value);
+				score+=Number(document.getElementById("i1").value);
 												
 												} else {
 																if(document.getElementById("i2").checked) {
 												score+=Number(document.getElementById("i2").value);
 												
-												
 												 
 												} else {
 																if(document.getElementById("i3").checked) {
+									
+									
 												score+=Number(document.getElementById("i3").value) 
 											
 											}
 
-																} 
+																} 												
 
 																
-								}
+								}																																				
 			
-												document.getElementById("i1").checked = "true" 
+															document.getElementById("i1").checked = "true" 
 				var quw;
 				var s1;
 				var s2;
@@ -174,6 +176,23 @@ function get() {
 																})
 								} 				
 								} else {
+											
+											if(document.getElementById("i1").checked) {
+																					score+=Number(document.getElementById("i1").value)
+												
+												} else {
+																if(document.getElementById("i2").checked) {
+												score+=Number(document.getElementById("i2").value);
+												
+												 
+												} else {
+																if(document.getElementById("i3").checked) {
+								
+												score+=Number(document.getElementById("i3").value) 
+											
+											}}
+
+																} 
 											
 										console.log(score);	document.getElementById("restart").style.display ="block" 
 												document.getElementById("quw").style.display ="none"
