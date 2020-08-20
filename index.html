@@ -19,10 +19,14 @@
 																position: absolute;
 																background-color: white;
 																border: 1.5px solid gray;
-																outline:none;
 																border-radius: 40px
 																} 
-												
+												#agei {
+																border: 0px solid white;
+															outline:none; 	
+															position: absolute;
+																background-color: white;
+																} 
 </style>
 </head>
 <body id="body">
@@ -31,7 +35,9 @@
 
 <center><div id="panel"></div></center>
 
-<input id='age' type="number" placeholder="        Ваш возраст">
+<form id="age">
+<input  pattern="^[ 0-9]+$" id='agei' type="number" placeholder="Ваш возраст">
+</form>
         
 <script type="text/javascript">
 
@@ -49,13 +55,19 @@ document.getElementById("panel-text").style.top = h/60
 
 document.getElementById("panel-text").style.left= w/20
 
-document.getElementById("age").style.top = h/10
+document.getElementById("age").style.top = h/8
 
-document.getElementById("age").style.width = w*0.8
+document.getElementById("age").style.width = w*0.83
 
-document.getElementById("age").style.height = h/23
+document.getElementById("age").style.height = h/21
 
 document.getElementById("age").style.left= w/20
+
+document.getElementById("agei").style.top=h/110
+
+document.getElementById("agei").style.left=w/20
+
+document.getElementById("agei").style.fontSize=h/45
 </script>
 
 </body>
