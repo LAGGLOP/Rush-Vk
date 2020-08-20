@@ -1,87 +1,124 @@
 <html>
-
 <head>
-<title>who</title>
 <style>
-
-#panelka {
-
-				box-shadow: 1px 1px 1px 1px #c4bebe;				left: 0px;
-
-				top: 0px;
-
-				position: absolute;
-
-				background-color: white;
-
-				}
-
 				
-
 				body {
-
 								background-color: #f0f0f0
-
 								} 
-
-								
-
-								#panel-text {
-
-												position: relative;
-
-												} 
-
 												#try {
-
 																position: absolute;
-
-																} 								
-
+																}
+																#s1 {
+																				display: inline;
+																				} 
+																							#s2 {
+																				display: inline;
+																				}
+																							#s3 {
+																				display: inline;
+																				}
+																				#roman {
+																								position: relative;
+																								display:none;
+																								}
+																								#rimg { 
+																										position:relative;
+																										width:200px;
+																										display: none;
+																												} 
 </style>
-
 </head>
-
 <body>
-
-<div id="panelka">
-
-<center><div id="panel-text">Вопрос 1</div></center>
-
-</div>
-
+<h><center><p id="roman">Поздравляю, ты ШиЗоИд! </p></center></h>
+<center><img
+id="rimg"        src="https://sun1.beltelecom-by-minsk.userapi.com/pZRgdqTMuMA9hJV5anAU1lGyGS1-M94Z5T1-Ow/FqRBFtKUoz4.jpg"></center>
 <div id='try'>
-
-   <p><b>Сколько Вам лет?</b></p>
-
-    <p><input name="dzen" type="radio" value="nedzen" checked>1-6</p>
-
-    <p><input name="dzen" type="radio" value="dzen">7-12</p>
-
-    <p><input name="dzen" type="radio" value="pdzen">13-16</p>
-
-        <p><input name="dzen" type="radio" value="pdzen">17-24</p>
-
-            <p><input name="dzen" type="radio" value="pdzen">24-99</p>
-
-    <p><input type="submit" value="Выбрать"></p>
-
+      <p><b id='quw'>???</b></p>
+      <a><input id="i1" name="ans" type="radio" checked><p id="s1"></p></a>
+      <br>
+         <a><input id="i2" name="ans" type="radio"><p id="s2"></p></a>
+           <br>
+            <a><input id="i3" name="ans" type="radio"><p id="s3"></p></a>
+            <br>
+            <br>
+            <button id="da" type="submit" onclick="get()">Да. </button>
     </div>
 
 <script>
+   function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
-document.getElementById("panelka").style.width = window.innerWidth;
-
-document.getElementById("panelka").style.height= window.innerHeight/12;
-
-document.getElementById("panel-text").style.fontSize= window.innerHeight/22.5;
-
-document.getElementById("panel-text").style.top= window.innerHeight/65
-
-document.getElementById("try").style.top= window.innerHeight/12
-
+var howquw=getRandom(2,3);
+var isquw = 1;
+var be = [] 
+				
+get() 
+function get() {
+				if(howquw>=isquw) {
+				var ai = getRandom(1,4);
+				if(be.find(x=>x.quw==ai)) {
+								get() 
+								} else {
+				var quw;
+				var s1;
+				var s2;
+				var s3;
+				if(ai==1) {
+								quw='Кто ты такое?'
+								s1='Программист'
+								s2='Шизоид'
+								s3='от шизоида слышу'
+								} else {
+												if(ai==2) {
+											quw='Сколько тебе лет?'	
+																			s1='1-99'
+								s2='всм'
+								s3='зочем вам мой возраст' 
+								} else {
+												if(ai==3) {
+								quw='Вы знакомы с романом?'
+								s1='Да'
+								s2='Неа'
+								s3='первый раз слышу'
+								}
+								} 
+												} 
+												document.getElementById("quw"). innerText=quw;
+												document.getElementById("s1"). innerText=s1;
+												
+												document.getElementById("s2"). innerText=s2;
+												
+												document.getElementById("s3"). innerText=s3;
+												
+												isquw+=1;
+												be.push({
+																"quw":ai
+																});
+																console.log(be) 
+								} 				
+								} else {
+												document.getElementById("quw").style.display ="none"
+												
+												document.getElementById("s1").style.display ="none" 
+												
+												document.getElementById("s2").style.display ="none"
+												
+												document.getElementById("s3").style.display ="none" 
+												
+												document.getElementById("da").style.display ="none"
+												
+												document.getElementById("i1").style.display ="none" 
+												
+												document.getElementById("i2").style.display ="none"
+												
+												document.getElementById("i3").style.display ="none" 
+												
+												document.getElementById("roman").style.display ="block" 
+												
+												document.getElementById("rimg").style.display ="block" 
+												} 
+				} 
 </script>
-
 </body>
-
 </html>
