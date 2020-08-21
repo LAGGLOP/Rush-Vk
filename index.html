@@ -121,8 +121,38 @@
 																																																									position: absolute;			
 										transform: rotate(90deg); 																																		z-index:2;								
 																								} 
-																								
-																								
+																								#wrapper {
+  width: 500px;
+  display:none;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: white;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 22px;
+  background-color: #659cef;
+  border-radius: 20px;
+  transition: width 500ms ease-in-out;
+} 
+
+#try-panel {
+				background: linear-gradient(45deg,  #ff4040, #ec5353);
+				
+				border-radius:40px;
+				
+				position:absolute;
+				} 
+			#try {
+						color:white;
+						position:relative;
+					font-weight: 450; 
+							} 																					
 </style>
 </head>
 <body id="body">
@@ -130,6 +160,15 @@
 <div id="panel-text">Какой ты Эмоджи?</div>
 
 <center><div id="panel"></div></center>
+<div id="try-panel">
+<center><div id="try">Отправить</div></center>
+</div>
+
+  <div id="wrapper">
+   <div class="progress-bar">
+    <span class="progress-bar-fill" style="width: 30%"></span>
+   </div>
+  </div> 
 
 <form id="age">
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
@@ -262,6 +301,17 @@ document.getElementById("imgarrow3").style.height = h/20
 
 document.getElementById("imgarrow3").style.left= w/1.3
 
+document.getElementById("try-panel").style.width = w*0.84
+
+document.getElementById("try-panel").style.height = h/20
+
+document.getElementById("try-panel").style.left= w/20 
+
+document.getElementById("try-panel").style.top = h/2.33
+
+document.getElementById("try").style.fontSize=h/35
+
+document.getElementById("try").style.top=h/130
 
 function ipal() {
 				
