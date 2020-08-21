@@ -122,6 +122,7 @@
 										transform: rotate(90deg); 																																		z-index:2;								
 																								} 
 																								#wrapper {
+																												position:relative;
   width: 500px;
   display:none;
 }
@@ -133,7 +134,7 @@
   border-radius: 20px;
 }
 
-.progress-bar-fill {
+#progress-bar-fill {
   display: block;
   height: 22px;
   background-color: #659cef;
@@ -164,11 +165,11 @@
 <center><div id="try">Отправить</div></center>
 </div>
 
-  <div id="wrapper">
+ <center><div id="wrapper">
    <div class="progress-bar">
-    <span class="progress-bar-fill" style="width: 30%"></span>
+    <span id="progress-bar-fill" style="width: 7%"></span>
    </div>
-  </div> 
+  </div></center> 
 
 <form id="age">
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
@@ -207,9 +208,11 @@
      	<script src = "https://code.jquery.com/jquery-3.5.0.js"></script>   
 <script type="text/javascript">
 
+
 var w = screen.width;
  
- var h = screen.height;
+var h = screen.height;
+ 
 
 document.getElementById("panel").style.width = w*0.95;
 
@@ -220,7 +223,81 @@ document.getElementById("panel-text").style.fontSize = h/30
 document.getElementById("panel-text").style.top = h/60
 
 document.getElementById("panel-text").style.left= w/20
+ 
+ function clear() {
+ 				
+ 				document.getElementById("age").style.display="none" 
+												
+												document.getElementById("pali").style.display="none"
+												
+												document.getElementById ("pal").style.display="none"
+												
+												document.getElementById("imgarrow1").style.display="none"										
+												
+												document.getElementById("hob").style.display="none"
+												
+												document.getElementById ("hobi").style.display="none"
+												
+												document.getElementById("imgarrow2").style.display="none"							
+												
+												document.getElementById("nasi").style.display="none"
+												
+												document.getElementById ("nas").style.display="none"
+												
+												document.getElementById("imgarrow3").style.display="none"					
+												
+												document.getElementById("try-panel").style.display="none" 
+ 				
+ 				} 
+ 				
+ 				 function unclear() {
+ 				
+ 				document.getElementById("age").style.display="block" 
+												
+												document.getElementById("pali").style.display="Block"
+												
+												document.getElementById ("pal").style.display="block"
+												
+												document.getElementById("imgarrow1").style.display="block"										
+												
+												document.getElementById("hob").style.display="Block"
+												
+												document.getElementById ("hobi").style.display="block"
+												
+												document.getElementById("imgarrow2").style.display="block"							
+												
+												document.getElementById("nasi").style.display="Block"
+												
+												document.getElementById ("nas").style.display="Block"
+												
+												document.getElementById("imgarrow3").style.display="Block"					
+												
+												document.getElementById("try-panel").style.display="Block" 
+												} 
+ 				
+ 
+screen.load=start() 
 
+
+function start() {
+		
+		clear() 
+					document.getElementById("wrapper").style.width=w*0.9;	document.getElementById("wrapper").style.display="block"
+
+document.getElementById("wrapper").style.top = h/8
+
+
+var pros = 0;
+var s = setInterval(function() {
+				pros+=1;				
+document.getElementById("progress-bar-fill").style.width=100+"%" 
+if(pros==150) {
+				clearInterval(s);
+				document.getElementById("progress-bar-fill").style.display = "none" 
+				unclear() 
+				} 
+}, 1)
+ 
 document.getElementById("age").style.top = h/8
 
 document.getElementById("age").style.width = w*0.83
@@ -312,11 +389,34 @@ document.getElementById("try-panel").style.top = h/2.33
 document.getElementById("try").style.fontSize=h/35
 
 document.getElementById("try").style.top=h/130
-
-function ipal() {
+				}  
 				
-
-	document.getElementById("pali").innerText = $("#pal :selected").val();
+				document.getElementById("try").onclick = function() {
+								clear() 
+	
+document.getElementById("progress-bar-fill").style.width= 7+"%";
+	document.getElementById("progress-bar-fill").style.display = "Block" 
+	
+	
+						var proi = 0;
+var c = setInterval(function() {
+				proi+=1;				
+document.getElementById("progress-bar-fill").style.width=100+"%" 
+if(proi==150) {
+				clearInterval(c);
+				document.getElementById("progress-bar-fill").style.display = "none"
+				unclear() 
+				} 
+}, 1)																	
+						
+				
+						
+								} 
+								
+								
+								
+								function ipal() {
+					document.getElementById("pali").innerText = $("#pal :selected").val();
 				}
 				
 				function ihob() {
@@ -329,7 +429,7 @@ function ipal() {
 				
 
 	document.getElementById("nasi").innerText = $("#nas :selected").val();
-				}   
+				}  
 </script>
 
 </body>
