@@ -25,17 +25,15 @@
 																																			font-weight: 450;
 								opacity:0.7;
 																}
-																
-																select {
-																				text-align: center; 
-																				} 
-																										#pal {								
-																position: absolute;																			
+																										#pal {						
+																																
+																position: absolute;															
+																											z-index:1;				
 																background-color: white;
 																border: 1.5px solid gray;
 																border-radius: 40px;
 																outline:none; 	
-																													color: black;
+																													color: white;
 															position: absolute;
 																						font-weight: 450;
 																						  -webkit-appearance: none;
@@ -44,8 +42,9 @@
 																} 
 																
 																#pali {
-																																	position: absolute;																			
-																background-color: white;
+																			
+																																	position: absolute;			
+																																												z-index:3;																
 																outline:none; 	
 																border: 2px solid white;
 																													color: black;
@@ -55,6 +54,10 @@
   -moz-appearance: none;
   appearance: none;			
 																				} 
+																				#imgarrow1 {
+																																																									position: absolute;			
+										transform: rotate(90deg); 																																		z-index:2;								
+																								} 
 </style>
 </head>
 <body id="body">
@@ -67,12 +70,13 @@
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
 </form>
 
-<form id="pal">
-<select id="pali">
-<option>Мужской</option>
-<option>Женский</option>
-</select>
+<form id="pali">Мужской
 </form>
+<select id="pal" onchange="ipal()">
+<option value="Мужской">Мужской</option>
+<option value="Женский">Женский</option>
+</select>
+<img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow1">
      	<script src = "https://code.jquery.com/jquery-3.5.0.js"></script>   
 <script type="text/javascript">
 
@@ -104,7 +108,7 @@ document.getElementById("agei").style.left=w/20
 
 document.getElementById("agei").style.fontSize=h/45
 
-document.getElementById("pal").style.top = h/5
+document.getElementById("pal").style.top = h/4.98
 
 document.getElementById("pal").style.width = w*0.84
 
@@ -114,16 +118,23 @@ document.getElementById("pal").style.left= w/20
 
 document.getElementById("pali").style.fontSize=h/45
 
-document.getElementById("pali").style.left= w/20
+document.getElementById("pali").style.left= w/10
 
-document.getElementById("pali").style.top= h/110
+document.getElementById("pali").style.top= h/4.75
 
-$( "#pal" ).click(function() {
-				$( "#pal" ).off( "click" )
-  $( "#pali" ).click() 
-  				$( "#pal" ).on( "click" )
-});
+document.getElementById("imgarrow1").style.top = h/4.95
 
+document.getElementById("imgarrow1").style.width = h/20
+
+document.getElementById("imgarrow1").style.height = h/20
+
+document.getElementById("imgarrow1").style.left= w/1.3
+
+function ipal() {
+				
+
+	document.getElementById("pali").innerText = $("#pal :selected").val();
+				}  
 </script>
 
 </body>
