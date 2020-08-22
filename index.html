@@ -156,19 +156,32 @@
 							} 		
 							
 							#emg {
-											display:none;
 											position: relative;
 											} 						
 											
 											#restart{
-				background: linear-gradient(45deg,  #ff4040, #ec5353);
+				background: #659cef;
 				
-				border-radius:40px;
-				
+				border-radius:7px;
+				display: table-cell;
+				vertical-align: middle;
 				position:relative;
 				color:white;
 				font-weight:450;
-				} 													
+				} 			
+						#emgpan{
+				background-color: white;
+				
+				border-radius:25px;
+				
+				position:relative;
+								box-shadow: 1px 1px 1.5px 1.5px #c4bebe;
+				} 			
+				
+				#pos {
+													font-weight: 450;  
+													position:relative;
+								} 				
 </style>
 </head>
 <body id="body">
@@ -186,9 +199,10 @@
    </div>
   </div></center> 
   
- <center><div id="emg">🗿</div></center>
+  
+ <center><div id="emgpan"><p id="pos">Поздравляю, <br>Вы:</p> <div id="emg">🗿</div>
 
- <center><div id="restart" onclick="start()">Ещё раз</div></center>
+ <div id="restart" onclick="start()">Ещё раз</div></div></center>
  
 
 <form id="age">
@@ -248,14 +262,12 @@ document.getElementById("panel-text").style.left= w/20
  				
  				document.getElementById("age").style.display="none" 
  				
- 				document.getElementById("emg").style.display="none" 
+ 				document.getElementById("emgpan").style.display="none" 
 												
 												document.getElementById("pali").style.display="none"
 												
 												document.getElementById ("pal").style.display="none"
 												
-																								
-												document.getElementById ("restart").style.display="none"
 												
 												document.getElementById("imgarrow1").style.display="none"										
 												
@@ -428,15 +440,28 @@ document.getElementById("try").style.top=h/130
 document.getElementById("progress-bar-fill").style.width= 7+"%";
 	document.getElementById("progress-bar-fill").style.display = "Block" 
 	
-	document.getElementById("emg").style.fontSize=w*0.3
+	document.getElementById("emg").style.fontSize=w*0.4
 
-document.getElementById("emg").style.top = h/5
+document.getElementById("emgpan").style.top = h/10
 
-document.getElementById("restart").style.width=w/3.6
+document.getElementById("emgpan").style.width=w*0.7
 
-document.getElementById("restart").style.fontSize=h/35
-	
-	document.getElementById("restart").style.top = h/5
+document.getElementById("emgpan").style.height=h*0.5
+
+document.getElementById("emg").style.top = h/33
+
+document.getElementById("restart").style.width=w/3.50
+
+document.getElementById("restart").style.height=h/24
+
+document.getElementById("restart").style.left=w/5.65
+
+document.getElementById("restart").style.fontSize=h/37.5
+
+document.getElementById("pos").style.fontSize=h/25
+
+document.getElementById("pos").style.top=h/28
+	document.getElementById("restart").style.top = h/10.6
 	
 						var proi = 0;
 var c = setInterval(function() {
@@ -447,9 +472,7 @@ if(proi==150) {
 				document.getElementById("progress-bar-fill").style.display = "none"
 	
 			
-			document.getElementById("emg").style.display="Block" 
-			
-			document.getElementById("restart").style.display="Block" 
+			document.getElementById("emgpan").style.display="Block" 
 			
 				var age = document.getElementById("agei").value;
 				
