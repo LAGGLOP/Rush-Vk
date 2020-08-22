@@ -158,7 +158,17 @@
 							#emg {
 											display:none;
 											position: relative;
-											} 																			
+											} 						
+											
+											#restart{
+				background: linear-gradient(45deg,  #ff4040, #ec5353);
+				
+				border-radius:40px;
+				
+				position:relative;
+				color:white;
+				font-weight:450;
+				} 													
 </style>
 </head>
 <body id="body">
@@ -177,6 +187,9 @@
   </div></center> 
   
  <center><div id="emg">🗿</div></center>
+
+ <center><div id="restart" onclick="start()">Ещё раз</div></center>
+ 
 
 <form id="age">
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
@@ -198,6 +211,7 @@
 <option value="Клоун">Клоун</option>
 <option value="Ютубер/Блогер">Ютубер/Блогер</option>
 <option value="Спорт">Спорт</option>
+<option value="Музыка">Музыка</option>
 </select>
 <img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow2"> 
 
@@ -208,7 +222,6 @@
 <option value="Хорошее">Хорошее</option>
 <option value="Нейтральное">Нейтральное</option>
 <option value="Злое">Злое</option>
-<option value="Хмурное">Хмурное</option>
 <option value="Идеальное">Индеальное</option>
 </select>
 <img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow3">  
@@ -234,10 +247,15 @@ document.getElementById("panel-text").style.left= w/20
  function clear() {
  				
  				document.getElementById("age").style.display="none" 
+ 				
+ 				document.getElementById("emg").style.display="none" 
 												
 												document.getElementById("pali").style.display="none"
 												
 												document.getElementById ("pal").style.display="none"
+												
+																								
+												document.getElementById ("restart").style.display="none"
 												
 												document.getElementById("imgarrow1").style.display="none"										
 												
@@ -289,10 +307,15 @@ screen.load=start()
 function start() {
 		
 		clear() 
-					document.getElementById("wrapper").style.width=w*0.9;	document.getElementById("wrapper").style.display="block"
-
+		
+			document.getElementById("wrapper").style.width=w*0.9
 document.getElementById("wrapper").style.top = h/8
+document.getElementById("progress-bar-fill").style.width=7+"%"		 
 
+document.getElementById("wrapper").style.display="Block"
+
+
+document.getElementById("progress-bar-fill").style.display="Block" 
 
 var pros = 0;
 var s = setInterval(function() {
@@ -399,7 +422,7 @@ document.getElementById("try").style.top=h/130
 				}  
 				
 				document.getElementById("try").onclick = function() {
-								if(document.getElementById("agei").value.length>=1) {
+								if(document.getElementById("agei").value.length>=1&&document.getElementById("agei").value.length<=3 ) {
 								clear() 
 	
 document.getElementById("progress-bar-fill").style.width= 7+"%";
@@ -407,7 +430,13 @@ document.getElementById("progress-bar-fill").style.width= 7+"%";
 	
 	document.getElementById("emg").style.fontSize=w*0.3
 
-document.getElementById("emg").style.top = h/8
+document.getElementById("emg").style.top = h/5
+
+document.getElementById("restart").style.width=w/3.6
+
+document.getElementById("restart").style.fontSize=h/35
+	
+	document.getElementById("restart").style.top = h/5
 	
 						var proi = 0;
 var c = setInterval(function() {
@@ -417,8 +446,11 @@ if(proi==150) {
 				clearInterval(c);
 				document.getElementById("progress-bar-fill").style.display = "none"
 	
-				document.getElementById("emg").style.display="Block" 
-				
+			
+			document.getElementById("emg").style.display="Block" 
+			
+			document.getElementById("restart").style.display="Block" 
+			
 				var age = document.getElementById("agei").value;
 				
 				
@@ -431,6 +463,110 @@ if(proi==150) {
 				 
 				 
 				 
+				 
+				 if(hob=="Клоун") {
+				 				document.getElementById("emg").innerText = "🤡" 
+				 				} 
+				 				
+				 							 if(hob=="Программист"&&nas=="Злое"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👨‍💻" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "👩‍💻" 
+				 								} 
+				 				} 
+				 				
+				 				if(nas!="Злое"&&hob=="Программист"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👨‍💼" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "👩‍💼" 
+				 								} 
+				 				} else {
+				 								if(hob=="Программист"&&age<=11) {
+				 												if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🙋‍♂️" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "🙋‍♀️" 
+				 								} 
+				 												}
+				 								} 
+				 
+				 				 				if(nas!="Злое"&&hob=="Нет") {
+				 							 									document.getElementById("emg").innerText = "🗿" 
+				 								
+				 				} else {
+				 											 				 				if(nas=="Злое"&&hob=="Нет")	{
+				 											 				 							document.getElementById("emg").innerText="🤬"
+				 											 				 								} 
+				 								} 
+				 								
+				 								
+				 												 				if(nas!="Злое"&&hob=="Ютубер/Блогер"&&age<=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🤪" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "😜" 
+				 								} 
+				 				} 
+				 				
+				 				if(nas!="Злое"&&hob=="Ютубер/Блогер"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👌"
+				 				} else {
+				 								document.getElementById("emg").innerText = "👍" 
+				 								} 
+				 				} 
+				 				
+				 							if(nas=="Злое"&&hob=="Ютубер/Блогер") {
+				 							 			document.getElementById("emg").innerText="🤑" 	
+				}
+				
+							 				if(nas!="Злое"&&hob=="Спорт"&&age>=13) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🤜"
+				 				} else {
+				 								document.getElementById("emg").innerText = "💅" 
+				 								} 
+				 				} 	
+				 				
+				 				
+				 											 				if(nas!="Злое"&&hob=="Спорт"&&age<=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "💪"
+				 				} else {
+				 								document.getElementById("emg").innerText = "💅" 
+				 								} 
+				 				} 	
+				 				
+				 				
+				 											 				if(nas=="Злое"&&hob=="Спорт") {
+				 							 				
+				 				document.getElementById("emg").innerText = "😎"
+				 				} 	
+				
+							 											 				if(nas!="Злое"&&hob=="Музыка"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🎶"
+				 				} else {
+				 								document.getElementById("emg").innerText = "🎼" 
+				 								} 
+				 				}
+				
+				if(nas!="Злое"&&hob=="Музыка"&&age<=11) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🎻"
+				 				} else {
+				 								document.getElementById("emg").innerText = "🎤" 
+				 								} 
+				 				} 
+				 				
+				 				
+				 								if(nas=="Злое"&&hob=="Музыка") {
+				 							 				
+				 				document.getElementById("emg").innerText = "🤬"
+				 				} 
+			
 				} 
 }, 1)																	
 						
@@ -458,7 +594,7 @@ if(proi==150) {
 				
 
 	document.getElementById("nasi").innerText = $("#nas :selected").val();
-				}  
+				}   
 </script>
 
 </body>
