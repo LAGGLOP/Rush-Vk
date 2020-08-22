@@ -153,7 +153,12 @@
 						color:white;
 						position:relative;
 					font-weight: 450; 
-							} 																					
+							} 		
+							
+							#emg {
+											display:none;
+											position: relative;
+											} 																			
 </style>
 </head>
 <body id="body">
@@ -170,6 +175,8 @@
     <span id="progress-bar-fill" style="width: 7%"></span>
    </div>
   </div></center> 
+  
+ <center><div id="emg">🗿</div></center>
 
 <form id="age">
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
@@ -392,11 +399,15 @@ document.getElementById("try").style.top=h/130
 				}  
 				
 				document.getElementById("try").onclick = function() {
+								if(document.getElementById("agei").value.length>=1) {
 								clear() 
 	
 document.getElementById("progress-bar-fill").style.width= 7+"%";
 	document.getElementById("progress-bar-fill").style.display = "Block" 
 	
+	document.getElementById("emg").style.fontSize=w*0.3
+
+document.getElementById("emg").style.top = h/8
 	
 						var proi = 0;
 var c = setInterval(function() {
@@ -405,15 +416,33 @@ document.getElementById("progress-bar-fill").style.width=100+"%"
 if(proi==150) {
 				clearInterval(c);
 				document.getElementById("progress-bar-fill").style.display = "none"
-				unclear() 
+	
+				document.getElementById("emg").style.display="Block" 
+				
+				var age = document.getElementById("agei").value;
+				
+				
+				var hob = $("#hob :selected").val();
+				
+				var pal = $("#pal :selected").val();
+				
+				
+				 var nas = $("#nas :selected").val(); 
+				 
+				 
+				 
 				} 
 }, 1)																	
 						
-				
+				} else {
+								document.getElementById("age").style.borderColor="red";
+								} 
 						
 								} 
 								
-								
+														document.getElementById("agei").onfocus=function() {
+												document.getElementById("age").style.borderColor="grey"
+												}
 								
 								function ipal() {
 					document.getElementById("pali").innerText = $("#pal :selected").val();
