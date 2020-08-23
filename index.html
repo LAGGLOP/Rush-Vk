@@ -241,7 +241,7 @@
 <img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow3">  
      	<script src = "https://code.jquery.com/jquery-3.5.0.js"></script>   
 <script type="text/javascript">
-
+clear() 
 
 var w = screen.width;
  
@@ -515,13 +515,17 @@ if(proi==150) {
 				 												}
 				 								} 
 				 
-				 				 				if(nas!="Злое"&&hob=="Нет") {
-				 							 									document.getElementById("emg").innerText = "🗿" 
+				 				 				if(nas!="Злое"&&nas!="Нейтральное"&&hob=="Нет") {
+				 							 									document.getElementById("emg").innerText = "😁" 
 				 								
 				 				} else {
 				 											 				 				if(nas=="Злое"&&hob=="Нет")	{
 				 											 				 							document.getElementById("emg").innerText="🤬"
-				 											 				 								} 
+				 											 				 								} else{
+				 											 				 								if(nas=="Нейтральное"&&hob=="Нет")	{
+				 											 				 							document.getElementById("emg").innerText="🗿"
+				 											 				 								}				
+				 											 				 												} 
 				 								} 
 				 								
 				 								
