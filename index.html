@@ -38,7 +38,23 @@
 																						  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-																} 
+																}
+																
+																					#pal2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  
 																
 																#pali {
 																																	position: absolute;			
@@ -56,7 +72,21 @@
 																																																									position: absolute;			
 										transform: rotate(90deg); 																																		z-index:2;								
 																								} 
-																																																	#hob {	
+					#hob2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  																																														#hob {	
 																position: absolute;															
 																											z-index:1;				
 																background-color: white;
@@ -88,7 +118,21 @@
 																																																									position: absolute;			
 										transform: rotate(90deg); 																																		z-index:2;								
 																								} 
-
+		#nas2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  
 #nas {	
 																position: absolute;															
 																											z-index:1;				
@@ -188,6 +232,7 @@
 
 <div id="panel-text">Какой ты Эмоджи?</div>
 
+
 <center><div id="panel"></div></center>
 <div id="try-panel">
 <center><div id="try">Отправить</div></center>
@@ -209,17 +254,20 @@
 <input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
 </form>
 
+
+<div id="pal"></div>
 <form id="pali">Мужской
 </form>
-<select id="pal" onchange="ipal()">
+<select id="pal2" onchange="ipal()">
 <option value="Мужской">Мужской</option>
 <option value="Женский">Женский</option>
 </select>
 <img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow1">
 
+<div id="hob"></div>
 <form id="hobi">Нет
 </form>
-<select id="hob" onchange="ihob()">
+<select id="hob2" onchange="ihob()">
 <option value="Нет">Нет</option>
 <option value="Программист">Программист </option>
 <option value="Клоун">Клоун</option>
@@ -229,10 +277,10 @@
 </select>
 <img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow2"> 
 
-
+<div id="nas"></div>
 <form id="nasi">Хорошее
 </form>
-<select id="nas" onchange="inas()">
+<select id="nas2" onchange="inas()">
 <option value="Хорошее">Хорошее</option>
 <option value="Нейтральное">Нейтральное</option>
 <option value="Злое">Злое</option>
@@ -268,10 +316,12 @@ document.getElementById("panel-text").style.left= w/20
 												
 												document.getElementById ("pal").style.display="none"
 												
-												
+																					document.getElementById ("pal2").style.display="none"	
 												document.getElementById("imgarrow1").style.display="none"										
 												
 												document.getElementById("hob").style.display="none"
+												
+												document.getElementById("hob2").style.display="none"
 												
 												document.getElementById ("hobi").style.display="none"
 												
@@ -280,6 +330,8 @@ document.getElementById("panel-text").style.left= w/20
 												document.getElementById("nasi").style.display="none"
 												
 												document.getElementById ("nas").style.display="none"
+												
+																								document.getElementById ("nas2").style.display="none"
 												
 												document.getElementById("imgarrow3").style.display="none"					
 												
@@ -295,9 +347,12 @@ document.getElementById("panel-text").style.left= w/20
 												
 												document.getElementById ("pal").style.display="block"
 												
-												document.getElementById("imgarrow1").style.display="block"										
+																	document.getElementById ("pal2").style.display="block"				
+												document.getElementById("imgarrow1").style.display="Block"										
 												
 												document.getElementById("hob").style.display="Block"
+												
+												document.getElementById("hob2").style.display="block"
 												
 												document.getElementById ("hobi").style.display="block"
 												
@@ -306,7 +361,8 @@ document.getElementById("panel-text").style.left= w/20
 												document.getElementById("nasi").style.display="Block"
 												
 												document.getElementById ("nas").style.display="Block"
-												
+		
+														document.getElementById ("nas2").style.display="block"										
 												document.getElementById("imgarrow3").style.display="Block"					
 												
 												document.getElementById("try-panel").style.display="Block" 
@@ -371,6 +427,14 @@ document.getElementById("pal").style.left= w/20
 
 document.getElementById("pali").style.fontSize=h/45
 
+document.getElementById("pal2").style.top = h/4.98
+
+document.getElementById("pal2").style.width = w*0.84
+
+document.getElementById("pal2").style.height = h/20
+
+document.getElementById("pal2").style.left= w/20
+
 document.getElementById("pali").style.left= w/10
 
 document.getElementById("pali").style.top= h/4.75
@@ -390,6 +454,14 @@ document.getElementById("hob").style.width = w*0.84
 document.getElementById("hob").style.height = h/20
 
 document.getElementById("hob").style.left= w/20
+
+document.getElementById("hob2").style.top = h/3.63
+
+document.getElementById("hob2").style.width = w*0.84
+
+document.getElementById("hob2").style.height = h/20
+
+document.getElementById("hob2").style.left= w/20
 
 document.getElementById("hobi").style.fontSize=h/45
 
@@ -412,6 +484,14 @@ document.getElementById("nas").style.width = w*0.84
 document.getElementById("nas").style.height = h/20
 
 document.getElementById("nas").style.left= w/20
+
+document.getElementById("nas2").style.top = h/2.85
+
+document.getElementById("nas2").style.width = w*0.84
+
+document.getElementById("nas2").style.height = h/20
+
+document.getElementById("nas2").style.left= w/20
 
 document.getElementById("nasi").style.fontSize=h/45
 
@@ -438,8 +518,10 @@ document.getElementById("try-panel").style.top = h/2.33
 document.getElementById("try").style.fontSize=h/35
 
 document.getElementById("try").style.top=h/130
+
+
 				}  
-				
+	
 				document.getElementById("try").onclick = function() {
 								if(document.getElementById("agei").value.length>=1&&document.getElementById("agei").value.length<=3 ) {
 								clear() 
@@ -484,12 +566,12 @@ if(proi==150) {
 				var age = document.getElementById("agei").value;
 				
 				
-				var hob = $("#hob :selected").val();
+				var hob = $("#hob2 :selected").val();
 				
-				var pal = $("#pal :selected").val();
+				var pal = $("#pal2 :selected").val();
 				
 				
-				 var nas = $("#nas :selected").val(); 
+				 var nas = $("#nas2 :selected").val(); 
 				 
 				 
 				 
@@ -615,20 +697,25 @@ if(proi==150) {
 												}
 								
 								function ipal() {
-					document.getElementById("pali").innerText = $("#pal :selected").val();
+					document.getElementById("pali").innerText = $("#pal2 :selected").val();
 				}
 				
 				function ihob() {
 				
 
-	document.getElementById("hobi").innerText = $("#hob :selected").val();
+	document.getElementById("hobi").innerText = $("#hob2 :selected").val();
 				}
 				
 				function inas() {
 				
 
-	document.getElementById("nasi").innerText = $("#nas :selected").val();
+	document.getElementById("nasi").innerText = $("#nas2 :selected").val();
 				}   
+				
+				
+				document.getElementById("imgarrow1").onmousedown=function(){
+								document.getElementById("pali").click()
+								}
 </script>
 
 </body>
