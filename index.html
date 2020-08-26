@@ -7,8 +7,12 @@
 
 <script type="text/javascript">
 
-
-document.write(VK.Share.button(false,{type: "round", text: "Поделится"})); 
+document.write(VK.Share.button({
+  url: 'http://mysite.com',
+  title: 'Заголовок страницы',
+  image: 'http://mysite.com/mypic.jpg',
+  noparse: true
+}));
 
 </script> 
 
