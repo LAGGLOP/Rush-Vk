@@ -34,7 +34,7 @@
 </script>
     
 <script>
-    bridge.sendPromise("VKWebAppShowNativeAds", {ad_format:”rewarded"})
+    vkBridge.sendPromise("VKWebAppShowNativeAds", {ad_format:”rewarded"})
          .then(data => console.log(data.result))
         .catch(error => console.log(error))
 </script>
