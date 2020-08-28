@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- 
+п.11. Сразу после тега <HEAD> должно быть включение рекламной библиотеки Яндекс: 
+<head><script type="text/javascript" src="https://awaps.yandex.net/data/lib/adsdk.js"></script>
+-->
+	<head>
+	<script type="text/javascript" src="https://awaps.yandex.net/data/lib/adsdk.js"></script>
+	
+<!-- 
+п. 10. Размер файла баннера указывается в теге <META> следующим образом:
+<meta name="ad.size" content="width=300,height=250">
+-->	
+	<meta charset="utf-8" name="ad.size" content="width=728,height=90">
+
+
+<style>*{margin:0;padding:0;}</style>       
+<title>HTML5_Ad_Demo</title>
+</head>    
+
+
+<body>
+<!--
+п.8. Открытие рекламируемого сайта должно происходить в новом окне, только по клику пользователя левой кнопки мыши на баннер.
+<a id="click1_area" href="#" target="_blank">...</a>
+-->
+    <a id="click1_area" href="#" target="_blank" style="width: 728px; height: 90px; cursor: pointer; position: absolute; z-index: 9;"></a>
+	
+	
+<!-- 
+
+п.9 Переходы в баннере должны использовать вызовы HTML5 API Yandex: 
+yandexHTML5BannerApi.getClickURLNum(1);  для перового клика, yandexHTML5BannerApi.getClickURLNum(2); для второго и т.д. 
+После объявления тегов "<a href ...></a>" присваиваем для них обработчики на клик указанным образом:
+document.getElementById("click1_area").href = yandexHTML5BannerApi.getClickURLNum(1);
+-->
+<script>
+	document.getElementById("click1_area").href = yandexHTML5BannerApi.getClickURLNum(1);
+</script>
+	
+	
+<!-- 
+п.5. Все ссылки в креативе должны быть относительными путями в ZIP-архиве. 
+При необходимости все вспомогательные JS-библиотеки должны предоставляться вместе с креативом.
+-->
+<script src="lib\creative.js"></script>
+
+<!-- 
+п.12. В креативе разрешены внешние ссылки на некоторые базовые библиотеки, включённые в инструменты разработки на HTML5: 
+Adobe Edge Animate CC, Adobe Flash CC HTML5 Canvas, CreateJS, GreenSock, Swiffy и другие.
+-->
+<script src="lib/sprite.js"></script>
+
+</body>
+</html>
