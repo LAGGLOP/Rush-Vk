@@ -1,4 +1,33 @@
-        <div id="vk_ads_128476"></div>
+  <script type='text/javascript' src='//ad.mail.ru/static/admanhtml/rbadman-html5.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//vk.com/js/api/adman_init.js' charset='utf-8'></script>
+     
+<script>
+window.addEventListener('load', function() {
+ 
+    var user_id = null; // user's id
+    var app_id = XXXXX; // your app's id
+ 
+    admanInit({
+        user_id: user_id,
+        app_id: app_id,
+        // mobile: true, // for mobile apps
+        // params: {preview: 1}, // to verify the correct operation of advertising
+        type: 'rewarded' // 'preloader' or 'rewarded' (default - 'preloader')
+    }, onAdsReady, onNoAds);
+ 
+    function onAdsReady(adman) {
+        adman.onStarted(function () {});
+        adman.onCompleted(function() {});
+        adman.onSkipped(function() {});
+        adman.onClicked(function() {});
+        adman.start('preroll');
+    };
+ 
+    function onNoAds() {};
+});
+</script> 
+
+     <div id="vk_ads_128476"></div>
 <script type="text/javascript">
   setTimeout(function() {
     var adsParams = {"ad_unit_id":128476,"ad_unit_hash":"09fdab8635670c8525fe00b056069b9f"};
