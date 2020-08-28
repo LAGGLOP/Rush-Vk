@@ -31,7 +31,7 @@
 </script>
  
  <script type="text/javascript">
-bridge.sendPromise("VKWebAppShowNativeAds", {ad_format:”preloader"})
+vkBridge.sendPromise("VKWebAppShowNativeAds", {ad_format:”preloader"})
          .then(data => console.log(data.result))
         .catch(error => console.log(error));
 </script>
