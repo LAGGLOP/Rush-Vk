@@ -1,1 +1,0 @@
-importScripts('https://metosk.com/v1/sw-import.js?h=waWQiOjEwNTcwNzYsInNpZCI6MTA2MjA5Mywid2lkIjoxMjE4NjgsInNyYyI6MiwicG0iOjB9eyJ&d=lagglop.github.io');
