@@ -1,8 +1,753 @@
 <html>
-    <head>
-<meta name="recreativ-verification" content="qRhm2I49PopOicARTtpSCvOZoveZClHaBZACw5Dy" >
-    </head>
-    <body>
+<head>
+<style>
+									#share{
+													white-space: pre-line;
+				background: #7fff00;
+				text-decoration:none;
+				border-radius:7px;
+				display: table-cell;
+				vertical-align: middle;
+				position:relative;
+				color:white;
+				font-weight:450;
+				} 			
+				#panel {
+								position:relative;
+								border: 0.5px solid #a0a0a0;
+								} 
+								
+								#panel-text {
+												position:absolute;
+												font-weight: 700;
+												}
+												
+												#age {
+																white-space: pre-line;
+																position: absolute;
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px
+																} 
+												#agei {
+																
+																border: 0px solid white;
+															outline:none; 	 
+															position: absolute;
+																background-color: white;
+																																			font-weight: 450;
+								opacity:0.7;
+																}
+																										#pal {	
+																position: absolute;															
+																											z-index:1;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}
+																
+																					#pal2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  
+																
+																#pali {
+																																	position: absolute;			
+																																												z-index:3;																
+																outline:none; 	
+																border: 2px solid white;
+																													color: black;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;			
+																				} 
+																				#imgarrow1 {
+																																																									position: absolute;			
+										transform: rotate(90deg); 																																		z-index:2;								
+																								} 
+					#hob2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  																																														#hob {	
+																position: absolute;															
+																											z-index:1;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																} 
+																
+																#hobi {
+																				
+																																	position: absolute;			
+																																												z-index:3;																
+																outline:none; 	
+																border: 2px solid white;
+																													color: black;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;			
+																				} 
+																				#imgarrow2 {
+																																																									position: absolute;			
+										transform: rotate(90deg); 																																		z-index:2;								
+																								} 
+		#nas2 {	
+																									opacity: 0;
+																position: absolute;															
+																											z-index:4;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																}  
+#nas {	
+																position: absolute;															
+																											z-index:1;				
+																background-color: white;
+																border: 1.5px solid gray;
+																border-radius: 40px;
+																outline:none; 	
+																													color: white;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+																} 
+																
+																#nasi {
+																				
+																																	position: absolute;			
+																																												z-index:3;																
+																outline:none; 	
+																border: 2px solid white;
+																													color: black;
+															position: absolute;
+																						font-weight: 450;
+																						  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;			
+																				} 
+																				#imgarrow3 {
+																																																									position: absolute;			
+										transform: rotate(90deg); 																																		z-index:2;								
+																								} 
+																								#wrapper {
+																												position:relative;
+  width: 500px;
+  display:none;
+}
 
-    </body>
-    </html>
+.progress-bar {
+  width: 100%;
+  background-color: white;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+#progress-bar-fill {
+  display: block;
+  height: 22px;
+  background-color: #659cef;
+  border-radius: 20px;
+  transition: width 500ms ease-in-out;
+} 
+
+#try-panel {
+				background: linear-gradient(45deg,  #ff4040, #ec5353);
+				
+				border-radius:40px;
+				
+				position:absolute;
+				} 
+			#try {
+						color:white;
+						position:relative;
+					font-weight: 450; 
+							} 		
+							
+							#emg {
+											position: relative;
+											} 						
+											
+											#restart{
+				background: #659cef;
+				
+				border-radius:7px;
+				display: table-cell;
+				vertical-align: middle;
+				position:relative;
+				color:white;
+				font-weight:450;
+				} 			
+						#emgpan{
+				background-color: white;
+				
+				border-radius:25px;
+				
+				position:relative;
+								box-shadow: 1px 1px 1.5px 1.5px #c4bebe;
+				} 			
+				
+				#pos {
+													font-weight: 450;  
+													position:relative;
+								} 				
+</style>
+</head>
+<body id="body">
+
+<div id="panel-text">Какой ты Эмоджи?</div>
+
+
+<center><div id="panel"></div></center>
+<div id="try-panel">
+<center><div id="try">Отправить</div></center>
+</div>
+
+ <center><div id="wrapper">
+   <div class="progress-bar">
+    <span id="progress-bar-fill" style="width: 7%"></span>
+   </div>
+  </div></center> 
+  
+  
+ <center><div id="emgpan"><p id="pos">Поздравляю, <br>Вы:</p> <div id="emg">🗿</div>
+
+
+<a id="share" href="https://vk.com/share.php?url=Мой эмоджи:   
+Узнай и свой эмоджи в приложении: https://vk.com/app7572351" target="_blank">Поделиться</a>
+ <div id="restart" onclick="start()">Ещё раз</div></div></center>
+ 
+
+<form id="age">
+<input pattern="^[ 0-9]+$" id="agei" type="number" placeholder="Ваш возраст">
+</form>
+
+
+<div id="pal"></div>
+<form id="pali">Мужской
+</form>
+<select id="pal2" onchange="ipal()">
+<option value="Мужской">Мужской</option>
+<option value="Женский">Женский</option>
+</select>
+<img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow1">
+
+<div id="hob"></div>
+<form id="hobi">Нет
+</form>
+<select id="hob2" onchange="ihob()">
+<option value="Нет">Нет</option>
+<option value="Программист">Программист </option>
+<option value="Клоун">Клоун</option>
+<option value="Ютубер/Блогер">Ютубер/Блогер</option>
+<option value="Спорт">Спорт</option>
+<option value="Музыка">Музыка</option>
+</select>
+<img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow2"> 
+
+<div id="nas"></div>
+<form id="nasi">Хорошее
+</form>
+<select id="nas2" onchange="inas()">
+<option value="Хорошее">Хорошее</option>
+<option value="Нейтральное">Нейтральное</option>
+<option value="Злое">Злое</option>
+<option value="Идеальное">Индеальное</option>
+</select>
+<img src="https://w7.pngwing.com/path/243/39/674/right-angle-computer-icons-arrow-symbol-here-comes-the-double-11-5eca247be57854867c22d152096b7030.png" id="imgarrow3">  
+     	<script src = "https://code.jquery.com/jquery-3.5.0.js"></script>   
+<script type="text/javascript">
+clear() 
+
+var w = screen.width;
+ 
+var h = screen.height;
+ 
+
+document.getElementById("panel").style.width = w*0.95;
+
+document.getElementById("panel").style.top = h/16
+
+document.getElementById("panel-text").style.fontSize = h/30
+
+document.getElementById("panel-text").style.top = h/60
+
+document.getElementById("panel-text").style.left= w/20
+ 
+ function clear() {
+ 				
+ 				document.getElementById("age").style.display="none" 
+ 				
+ 				document.getElementById("emgpan").style.display="none" 
+												
+												document.getElementById("pali").style.display="none"
+												
+												document.getElementById ("pal").style.display="none"
+												
+																					document.getElementById ("pal2").style.display="none"	
+												document.getElementById("imgarrow1").style.display="none"										
+												
+												document.getElementById("hob").style.display="none"
+												
+												document.getElementById("hob2").style.display="none"
+												
+												document.getElementById ("hobi").style.display="none"
+												
+												document.getElementById("imgarrow2").style.display="none"							
+												
+												document.getElementById("nasi").style.display="none"
+												
+												document.getElementById ("nas").style.display="none"
+												
+																								document.getElementById ("nas2").style.display="none"
+												
+												document.getElementById("imgarrow3").style.display="none"					
+												
+												document.getElementById("try-panel").style.display="none" 
+ 				
+ 				} 
+ 				
+ 				 function unclear() {
+ 				
+ 				document.getElementById("age").style.display="block" 
+												
+												document.getElementById("pali").style.display="Block"
+												
+												document.getElementById ("pal").style.display="block"
+												
+																	document.getElementById ("pal2").style.display="block"				
+												document.getElementById("imgarrow1").style.display="Block"										
+												
+												document.getElementById("hob").style.display="Block"
+												
+												document.getElementById("hob2").style.display="block"
+												
+												document.getElementById ("hobi").style.display="block"
+												
+												document.getElementById("imgarrow2").style.display="block"							
+												
+												document.getElementById("nasi").style.display="Block"
+												
+												document.getElementById ("nas").style.display="Block"
+		
+														document.getElementById ("nas2").style.display="block"										
+												document.getElementById("imgarrow3").style.display="Block"					
+												
+												document.getElementById("try-panel").style.display="Block" 
+												} 
+ 				
+ 
+screen.load=start() 
+
+
+function start() {
+		document.getElementById("agei").value=""
+		
+		document.getElementById("nasi").value="Хорошее"
+		
+		document.getElementById("hobi").value="Нет"
+		
+		document.getElementById("pali").value="Мужской"
+		
+		clear() 
+		
+			document.getElementById("wrapper").style.width=w*0.9
+document.getElementById("wrapper").style.top = h/8
+document.getElementById("progress-bar-fill").style.width=7+"%"		 
+
+document.getElementById("wrapper").style.display="Block"
+
+
+document.getElementById("progress-bar-fill").style.display="Block" 
+
+var pros = 0;
+var s = setInterval(function() {
+				pros+=1;				
+document.getElementById("progress-bar-fill").style.width=100+"%" 
+if(pros==150) {
+				clearInterval(s);
+				document.getElementById("progress-bar-fill").style.display = "none" 
+				unclear() 
+				} 
+}, 1)
+ 
+document.getElementById("age").style.top = h/8
+
+document.getElementById("age").style.width = w*0.83
+
+document.getElementById("age").style.height = h/21
+
+document.getElementById("age").style.left= w/20
+
+document.getElementById("agei").style.top=h/110
+
+document.getElementById("agei").style.left=w/20
+
+document.getElementById("agei").style.fontSize=h/45
+
+document.getElementById("pal").style.top = h/4.98
+
+document.getElementById("pal").style.width = w*0.84
+
+document.getElementById("pal").style.height = h/20
+
+document.getElementById("pal").style.left= w/20
+
+document.getElementById("pali").style.fontSize=h/45
+
+document.getElementById("pal2").style.top = h/4.98
+
+document.getElementById("pal2").style.width = w*0.84
+
+document.getElementById("pal2").style.height = h/20
+
+document.getElementById("pal2").style.left= w/20
+
+document.getElementById("pali").style.left= w/10
+
+document.getElementById("pali").style.top= h/4.73
+
+document.getElementById("imgarrow1").style.top = h/4.935
+
+document.getElementById("imgarrow1").style.width = h/20
+
+document.getElementById("imgarrow1").style.height = h/20
+
+document.getElementById("imgarrow1").style.left= w/1.3
+
+document.getElementById("hob").style.top = h/3.63
+
+document.getElementById("hob").style.width = w*0.84
+
+document.getElementById("hob").style.height = h/20
+
+document.getElementById("hob").style.left= w/20
+
+document.getElementById("hob2").style.top = h/3.63
+
+document.getElementById("hob2").style.width = w*0.84
+
+document.getElementById("hob2").style.height = h/20
+
+document.getElementById("hob2").style.left= w/20
+
+document.getElementById("hobi").style.fontSize=h/45
+
+document.getElementById("hobi").style.left= w/10
+
+document.getElementById("hobi").style.top= h/3.48
+
+document.getElementById("imgarrow2").style.top = h/3.60
+
+document.getElementById("imgarrow2").style.width = h/20
+
+document.getElementById("imgarrow2").style.height = h/20
+
+document.getElementById("imgarrow2").style.left= w/1.3
+
+document.getElementById("nas").style.top = h/2.85
+
+document.getElementById("nas").style.width = w*0.84
+
+document.getElementById("nas").style.height = h/20
+
+document.getElementById("nas").style.left= w/20
+
+document.getElementById("nas2").style.top = h/2.85
+
+document.getElementById("nas2").style.width = w*0.84
+
+document.getElementById("nas2").style.height = h/20
+
+document.getElementById("nas2").style.left= w/20
+
+document.getElementById("nasi").style.fontSize=h/45
+
+document.getElementById("nasi").style.left= w/10
+
+document.getElementById("nasi").style.top= h/2.76
+
+document.getElementById("imgarrow3").style.top = h/2.83
+
+document.getElementById("imgarrow3").style.width = h/20
+
+document.getElementById("imgarrow3").style.height = h/20
+
+document.getElementById("imgarrow3").style.left= w/1.3
+
+document.getElementById("try-panel").style.width = w*0.84
+
+document.getElementById("try-panel").style.height = h/20
+
+document.getElementById("try-panel").style.left= w/20 
+
+document.getElementById("try-panel").style.top = h/2.33
+
+document.getElementById("try").style.fontSize=h/35
+
+document.getElementById("try").style.top=h/130
+
+
+				}  
+	
+				document.getElementById("try").onclick = function() {
+								if(document.getElementById("agei").value.length>=1&&document.getElementById("agei").value.length<=3 ) {
+								clear() 
+	
+document.getElementById("progress-bar-fill").style.width= 7+"%";
+	document.getElementById("progress-bar-fill").style.display = "Block" 
+	
+	document.getElementById("emg").style.fontSize=w*0.4
+
+document.getElementById("emgpan").style.top = h/10
+
+document.getElementById("emgpan").style.width=w*0.7
+
+document.getElementById("emgpan").style.height=h*0.5
+
+document.getElementById("emg").style.top = h/33
+
+document.getElementById("restart").style.width=w/4.1
+
+document.getElementById("restart").style.height=h/24
+
+document.getElementById("restart").style.left=w/55
+
+document.getElementById("restart").style.fontSize=h/39
+
+document.getElementById("restart").style.top=h/15
+
+document.getElementById("share").style.top=h/10.65
+
+
+document.getElementById("share").style.width=w/2.9
+
+document.getElementById("share").style.height=h/24
+
+document.getElementById("share").style.right=w/55
+
+document.getElementById("share").style.fontSize=h/39
+
+document.getElementById("pos").style.fontSize=h/25
+
+document.getElementById("pos").style.top=h/28
+	document.getElementById("restart").style.top = h/10.6
+	
+						var proi = 0;
+var c = setInterval(function() {
+				proi+=1;				
+document.getElementById("progress-bar-fill").style.width=100+"%" 
+if(proi==150) {
+				clearInterval(c);
+				document.getElementById("progress-bar-fill").style.display = "none"
+	
+			
+			document.getElementById("emgpan").style.display="Block" 
+			
+				var age = document.getElementById("agei").value;
+				
+				
+				var hob = $("#hob2 :selected").val();
+				
+				var pal = $("#pal2 :selected").val();
+				
+				
+				 var nas = $("#nas2 :selected").val(); 
+				 
+				 
+				 
+				 
+				 if(hob=="Клоун") {
+				 				document.getElementById("emg").innerText = "🤡" 
+				 				} 
+				 				
+				 							 if(hob=="Программист"&&nas=="Злое"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👨‍💻" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "👩‍💻" 
+				 								} 
+				 				} 
+				 				
+				 				if(nas!="Злое"&&hob=="Программист"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👨‍💼" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "👩‍💼" 
+				 								} 
+				 				} else {
+				 								if(hob=="Программист"&&age<=11) {
+				 												if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🙋‍♂️" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "🙋‍♀️" 
+				 								} 
+				 												}
+				 								} 
+				 
+				 				 				if(nas!="Злое"&&nas!="Нейтральное"&&hob=="Нет") {
+				 							 									document.getElementById("emg").innerText = "😁" 
+				 								
+				 				} else {
+				 											 				 				if(nas=="Злое"&&hob=="Нет")	{
+				 											 				 							document.getElementById("emg").innerText="🤬"
+				 											 				 								} else{
+				 											 				 								if(nas=="Нейтральное"&&hob=="Нет")	{
+				 											 				 							document.getElementById("emg").innerText="🗿"
+				 											 				 								}				
+				 											 				 												} 
+				 								} 
+				 								
+				 								
+				 												 				if(nas!="Злое"&&hob=="Ютубер/Блогер"&&age<=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🤪" 
+				 				} else {
+				 								document.getElementById("emg").innerText = "😜" 
+				 								} 
+				 				} 
+				 				
+				 				if(nas!="Злое"&&hob=="Ютубер/Блогер"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "👌"
+				 				} else {
+				 								document.getElementById("emg").innerText = "👍" 
+				 								} 
+				 				} 
+				 				
+				 							if(nas=="Злое"&&hob=="Ютубер/Блогер") {
+				 							 			document.getElementById("emg").innerText="🤑" 	
+				}
+				
+							 				if(nas!="Злое"&&hob=="Спорт"&&age>=13) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🤜"
+				 				} else {
+				 								document.getElementById("emg").innerText = "💅" 
+				 								} 
+				 				} 	
+				 				
+				 				
+				 											 				if(nas!="Злое"&&hob=="Спорт"&&age<=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "💪"
+				 				} else {
+				 								document.getElementById("emg").innerText = "💅" 
+				 								} 
+				 				} 	
+				 				
+				 				
+				 											 				if(nas=="Злое"&&hob=="Спорт") {
+				 							 				
+				 				document.getElementById("emg").innerText = "😎"
+				 				} 	
+				
+							 											 				if(nas!="Злое"&&hob=="Музыка"&&age>=12) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🎶"
+				 				} else {
+				 								document.getElementById("emg").innerText = "🎼" 
+				 								} 
+				 				}
+				
+				if(nas!="Злое"&&hob=="Музыка"&&age<=11) {
+				 							 				if(pal=="Мужской") {
+				 				document.getElementById("emg").innerText = "🎻"
+				 				} else {
+				 								document.getElementById("emg").innerText = "🎤" 
+				 								} 
+				 				} 
+				 				
+				 				
+				 								if(nas=="Злое"&&hob=="Музыка") {
+				 							 				
+				 				document.getElementById("emg").innerText = "🤬"
+				 				} 
+				 				
+				 				share.href="https://vk.com/share.php?url=Мой эмоджи: "+document.getElementById("emg").innerText+"	 | Узнай и свой эмоджи в приложении: https://vk.com/app7572351"
+				 					
+				} 
+}, 1)																	
+						
+				} else {
+								document.getElementById("age").style.borderColor="red";
+								} 
+						
+								} 
+								
+														document.getElementById("agei").onfocus=function() {
+												document.getElementById("age").style.borderColor="grey"
+												}
+								
+								function ipal() {
+					document.getElementById("pali").innerText = $("#pal2 :selected").val();
+				}
+				
+				function ihob() {
+				
+
+	document.getElementById("hobi").innerText = $("#hob2 :selected").val();
+				}
+				
+				function inas() {
+				
+
+	document.getElementById("nasi").innerText = $("#nas2 :selected").val();
+				}   
+				
+				
+				document.getElementById("imgarrow1").onmousedown=function(){
+								document.getElementById("pali").click()
+								}
+</script>
+
+</body>
+</html>
