@@ -94,17 +94,97 @@ bel{
 																								top:-100;
 																								width: 25%;
 																											left:50;
-																								} 
+																								}
+																								#block2 {
+																												display:none;
+																												font-size:50;
+																												} 
+					#q1 {
+		font-size:50;							
+		position:relative;
+		left:40;							
+									} 	
+										#q2 {
+		font-size:50;							
+		position:relative;
+		left:40;							
+									} 		 
+									
+										#form1 {
+																															position:relative;
+																															
+																																} 																													#form3 {
+																															position:relative;
+																															top:-140;	
+																																} 
+																												#form2 {
+																															position:relative;
+																															top:-70;	
+																																} 
+																												#qs1 {
+																															position:relative;	
+																																left:100;
+																																top:-60;
+																																} 
+																																#qs2 {
+																														left:100;				position:relative;		
+																														top:-60;
+																																				} 
+																									#qi{
+																								position:absolute;
+																								top:-93;	
+																								left:27;				
+																													} 			
+																												#q {
+																													position: absolute;
+																													top:25;
+																													left:25;
+																													width:100;
+																													height:100;
+																													border: 3px solid black;
+																													font-align:center;
+																													font-weight:700;
+																													font-size:90;
+																													border-radius:20px;			
+																																} 
+																																
+																									#q3 {
+		font-size:50;							
+		position:relative;
+		left:40;							
+									} 	 
+									
+											
+																																		#qs3 {
+																															position:relative;	
+																																left:100;
+																																top:-60;
+																																}  			
+																																#submit {
+																										position:relative;
+																										border: 3px solid black;		
+			border-radius:410px;																							background:white;	
+			width:400;		
+			height:90;		
+			font-size: 70px;
+			font-weight:600;
+			text-align:center;
+			top:-210;
+			left:70;
+																																				} 
 																				} 
 																
 </style>
 </head>
 <body>
-
+<div>
+<div id="q"><p id="qi">?</p></div>
+</div>
 <center><bel id="bel">Belarus
 </bel></center>
 <hr>
 
+<div id="block">
 <p id="name1">Home</p>
 <p id="text1">Belarus is a country popular for its historical architecture and buildings.  The main languages ​​are Russian and Belarusian.  The stalitsa of Belarus is the city of Minsk, located in its center. Belarus consists of Minsk, Grodno, Mogilev, Vitebsk, Gomel and Brest regions. </p>
 
@@ -121,5 +201,131 @@ bel{
 <p id="text3">National cuisine A significant part of the national Belarusian cuisine is made up of dishes made from grated potatoes: potato pancakes, dumplings, sorcerers, potato casseroles, grandma, pummeled, kapytki, komoviki, lay (potato roll with filling), stewed potatoes with meat and (or) mushrooms, etc.</p>
 
 <img id="img4" src="https://www.izyskon.com/wp-content/uploads/2017/12/Draniki-kartofelnye-retsept.jpg">
+</div>
+<div id="block2">
+
+  <form id="form1"> 
+ <h6> <p id="q1">1. What are main languages in Belarus?</p></h6>
+  <div id="qs1">
+    <input type="radio" id="a1q1"
+           name="contact" value="1" checked>
+    <label id="l1q1"  for="a1q1">English and Russian</label><br>
+    
+       <input type="radio" id="a2q1"
+           name="contact" value="2">
+    <label id="l2q1"  for="a2q1">Belorussian and Russian</label><br>
+    
+       <input type="radio" id="a3q1"
+           name="contact" value="3">
+    <label id="l3q1"  for="a3q1">Belorussian and English</label><br>
+    
+  
+  </div>
+  
+</form>
+
+ <form id="form2"> 
+ <h6> <p id="q2">2. How many contries are surraund Belarus? </p></h6>
+  <div id="qs2">
+    <input type="radio" id="a1q2"
+           name="contact" value="1" checked>
+    <label id="l1q2" for="a1q2">7</label><br>
+    
+       <input type="radio" id="a2q1"
+           name="contact" value="2">
+    <label id="l2q2" for="a2q2">6</label></label><br>
+    
+       <input type="radio" id="a3q3"
+           name="contact" value="3">
+    <label id="l3q2" for="a3q2">5</label><br>
+    
+  
+  </div>
+  
+  </form>
+  
+  <form id="form3"> 
+ <h6> <p id="q3">3. Which of these dishes is a Belarusian delicacy? </p></h6>
+  <div id="qs3">
+    <input type="radio" id="a1q3"
+           name="contact" value="1" checked>
+    <label id="l1q3" for="a1q3">Potato pancakes</label><br>
+    
+       <input type="radio" id="a2q3"
+           name="contact" value="2">
+    <label for="a2q3" id="l2q3" >Chicken</label><br>
+    
+       <input type="radio" id="a3q3"
+           name="contact" value="3">
+    <label id="l3q3" for="a3q3">Burger</label><br>
+    
+  
+  </div>
+  
+
+    
+</form>
+  <div id="submit">Отправить</div>    
+</div>
+<script type="text/javascript">
+var block =document.getElementById("block")
+
+var block2 =document.getElementById("block2")
+
+var q=document.getElementById("q") 
+
+var submit=document.getElementById("submit") 
+
+q.onclick=function() {
+if(block.style.display=="block"	) {
+				block.style.display="none";
+				block2.style.display="block";
+				document.getElementById("a1q1").checked="true"
+				document.getElementById("a1q2").checked="true"
+				document.getElementById("a1q3").checked="true"
+				
+				document.getElementById("l1q1").style.color="black" 
+
+document.getElementById("l2q1").style.color="black" 
+
+document.getElementById("l3q1").style.color="black"
+
+document.getElementById("l1q2").style.color="black"
+
+document.getElementById("l2q2").style.color="Black" 
+
+document.getElementById("l3q2").style.color="black"
+
+document.getElementById("l1q3").style.color="black"
+
+document.getElementById("l2q3").style.color="black"
+
+document.getElementById("l3q3").style.color="black"
+				
+				} else {
+										block2.style.display="none";
+				block.style.display="block";
+								} 		
+								submit.onclick=function() {
+											
+														document.getElementById("l1q1").style.color="red"		
+														document.getElementById("l3q1").style.color="red"		
+																document.getElementById("l2q1").style.color="green" 										
+			
+									
+														document.getElementById("l1q2").style.color="red"		
+														document.getElementById("l2q2").style.color="red"		
+																
+			document.getElementById("l3q2").style.color="green" 					
+			
+									
+														document.getElementById("l1q3").style.color="Green"		
+														document.getElementById("l3q3").style.color="red"		
+															
+			document.getElementById("l2q3").style.color="red" 																	 		
+																} 
+												
+				} 
+</script>
 </body>
 </html>
