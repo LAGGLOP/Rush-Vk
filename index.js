@@ -1,12 +1,12 @@
  //баланс
- let balance = 1000000;
+ let balance = 0;
  let balance_speed = 0;
  let balance_click = 0.01;
 
  let server_max = 10;
  let server_zanato = 0;
 
- let video_cards_1 = 1;
+ let video_cards_1 = 0;
  let pross_1 = 0;
 
  let server_temp = 68*Math.ceil((video_cards_1+pross_1)/100);
