@@ -2,7 +2,7 @@
     font-family: "Balance";
     src: url("Exo2-VariableFont_wght.ttf");
   }
-html {
+* {
     background-color: "white":
 }
   #card {
