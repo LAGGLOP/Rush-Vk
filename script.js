@@ -90,8 +90,8 @@ Crafty.e("2D,DOM,Color")
 
 var ver = Crafty.e("2D,DOM,Text")
 .text(game.ver)
-.textFont({ size: '50px', weight: 'bold' })
-.attr({y:window.innerHeight-50,x:window.innerWidth-150})
+.textFont({ size: '25px', weight: 'bold' })
+.attr({y:window.innerHeight-25,x:window.innerWidth-75})
 
 player.attach(ver)
 
