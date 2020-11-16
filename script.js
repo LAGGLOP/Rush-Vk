@@ -14,6 +14,8 @@ Crafty.timer.FPS(120);
 
 Crafty.background('LimeGreen');
 
+
+
 var player = Crafty.e("2D","Color","DOM","player")
 .attr({x:window.innerWidth/2-window.innerWidth/18,y:window.innerHeight/2-window.innerWidth/18,w:window.innerWidth/9,h:window.innerWidth/9})
 .color("white")
@@ -40,12 +42,12 @@ var dj = Crafty.e("2D","Color", "dj", "DOM")
 .color("skyblue")
 
 var djm = Crafty.e("2D","Color", "djm", "DOM","Draggable","MouseDrag","Collision")
-.attr({x:window.innerWidth/3-window.innerWidth/20,y:window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/20,w:window.innerWidth/10,h:window.innerWidth/10})
+.attr({x:window.innerWidth/3-window.innerWidth/17,y:window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/17,w:window.innerWidth/8.5,h:window.innerWidth/8.5})
 .color("blue")
 .enableDrag()
 .bind("StopDrag", function() {
-djm.x=window.innerWidth/3-window.innerWidth/20;
-djm.y=window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/20;
+djm.x=window.innerWidth/3-window.innerWidth/17;
+djm.y=window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/17;
 var howToStop = 50;
 var howToX = move.speedX/howToStop;
 var howToY = move.speedY/howToStop;
@@ -58,6 +60,7 @@ if(howToStop>0) {
     clearInterval(setIntToStop);
 }
 },1);
+
 })
 .bind("Dragging", function() {
     if(djm.x<dj.x-djm.w/2) {
