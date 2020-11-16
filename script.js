@@ -1,7 +1,6 @@
 var move = {
     "speedX":0,
-    "speedY":0,
-    "rotation":0
+    "speedY":0
 }
 
 Crafty.init(document.getElementById('game'));
@@ -18,8 +17,8 @@ setInterval(function() {
     if(move.speedX!=0&&move.speedY!=0) {
     player.x+=move.speedX;
     player.y+=move.speedY;
-    player.rotation = move.rotation;
-    nickSee();
+    Crafty.viewport.x=-(player.x-window.innerWidth/2+player.w/2);
+    Crafty.viewport.y=-(player.y-window.innerHeight/2+player.h/2);
     }
 },10);
 
@@ -28,6 +27,8 @@ var player_nick = Crafty.e("2D","DOM","Text","player_nick")
 .textAlign('center')
 .text("петух228")
 .textFont({ size: window.innerWidth/25+'px', weight: 'bold' })
+
+player.attach(player_nick)
 
 var dj = Crafty.e("2D","Color", "dj", "DOM")
 .attr({x:window.innerWidth/2-window.innerWidth/6,y:window.innerHeight-window.innerWidth/2,w:window.innerWidth/3,h:window.innerWidth/3})
@@ -40,8 +41,8 @@ var djm = Crafty.e("2D","Color", "djm", "DOM","Draggable","MouseDrag","Mouse")
 
 .bind("StopDrag", function(){
 
-djm.x=window.innerWidth/2-window.innerWidth/17;
-djm.y=window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/17;
+djm.x=dj.x+dj.w/2-window.innerWidth/17;
+djm.y=dj.y+dj.w/2-window.innerWidth/17;
 var howToStop = 50;
 var howToX = move.speedX/howToStop;
 var howToY = move.speedY/howToStop;
@@ -69,13 +70,17 @@ if(howToStop>0) {
     if(djm.y>dj.y+dj.h-djm.h/2) {
         djm.y=dj.y+dj.h-djm.h/2;
     }
-    move.speedX=(djm.x-(window.innerWidth/2-window.innerWidth/20))/50;
-    move.speedY=(djm.y-(window.innerHeight-window.innerWidth/2+dj.w/2-window.innerWidth/20))/50;
+    move.speedX=(djm.x-(dj.x+dj.w/2-window.innerWidth/17))/50;
+    move.speedY=(djm.y-(dj.y+dj.w/2-window.innerWidth/17))/50;
 })
 
-function nickSee() {
-    player_nick.x=player.x-window.innerWidth/40;
-    player_nick.y=player.y+window.innerWidth/8.5;
+player.attach(dj)
+dj.attach(djm)
+
+for(var i=0;i<=20;i++) {
+Crafty.e("2D,DOM,Color")
+.attr({x:Crafty.math.randomNumber(0,5000),y:Crafty.math.randomNumber(0,5000),w:50,h:50})
+.color("red")
 }
 
 
