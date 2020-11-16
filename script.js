@@ -1,3 +1,8 @@
+var game = {
+    "ver":"V0.0.1"
+}
+
+
 var move = {
     "speedX":0,
     "speedY":0
@@ -82,5 +87,12 @@ Crafty.e("2D,DOM,Color")
 .attr({x:Crafty.math.randomNumber(0,5000),y:Crafty.math.randomNumber(0,5000),w:50,h:50})
 .color("red")
 }
+
+var ver = Crafty.e("2D,DOM,Text")
+.text(game.ver)
+.textFont({ size: '50px', weight: 'bold' })
+.attr({y:window.innerHeight-50,x:window.innerWidth-150})
+
+player.attach(ver)
 
 
