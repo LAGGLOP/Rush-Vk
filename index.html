@@ -5,6 +5,10 @@
             <style>* {padding: 0;margin:0};</style>
     </head>
     <body>
-        <iframe src="https://powerful-stream-87710.herokuapp.com/" width="100%" height="100%"></iframe>
+        <iframe id="body" src="https://powerful-stream-87710.herokuapp.com/"></iframe>
+        <script>
+            document.getElementById("body").width = window.innerWidth;
+                        document.getElementById("body").height = window.innerheight;
+        </script>
     </body>
 </html>
